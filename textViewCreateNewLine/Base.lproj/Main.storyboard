@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="textViewCreateNewLine" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mcO-dF-8Qu">
+                                <rect key="frame" x="0.0" y="537" width="600" height="63"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAl-PW-lbt">
+                                        <rect key="frame" x="539" y="23" width="46" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.79175454211908303" blue="0.35948304370475193" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="2nk-qA-Hq4"/>
+                                            <constraint firstAttribute="height" constant="30" id="hw1-p0-zX2"/>
+                                        </constraints>
+                                        <state key="normal" title="Send"/>
+                                        <connections>
+                                            <action selector="pressedBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UgQ-FJ-nac"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LtF-vy-7gK">
+                                        <rect key="frame" x="32" y="20" width="497" height="33"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="yLn-Xk-mJT"/>
+                                        </connections>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="IAl-PW-lbt" firstAttribute="leading" secondItem="LtF-vy-7gK" secondAttribute="trailing" constant="70" id="DkO-uf-hv7"/>
+                                    <constraint firstItem="LtF-vy-7gK" firstAttribute="leading" secondItem="mcO-dF-8Qu" secondAttribute="leading" constant="32" id="O2s-II-P2N"/>
+                                    <constraint firstItem="IAl-PW-lbt" firstAttribute="leading" secondItem="LtF-vy-7gK" secondAttribute="trailing" constant="10" id="Pq7-z9-slz"/>
+                                    <constraint firstAttribute="bottom" secondItem="LtF-vy-7gK" secondAttribute="bottom" constant="10" id="QX3-5e-qik"/>
+                                    <constraint firstItem="LtF-vy-7gK" firstAttribute="top" secondItem="mcO-dF-8Qu" secondAttribute="top" constant="20" id="RYx-JK-w6e"/>
+                                    <constraint firstAttribute="bottom" secondItem="IAl-PW-lbt" secondAttribute="bottom" constant="10" id="V51-kQ-JrQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="IAl-PW-lbt" secondAttribute="trailing" constant="15" id="Vac-3x-dwu"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DkO-uf-hv7"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mcO-dF-8Qu" secondAttribute="trailing" id="PZd-1Y-jp7"/>
+                            <constraint firstItem="mcO-dF-8Qu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QJY-UG-5lW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mcO-dF-8Qu" secondAttribute="bottom" id="dFy-HO-Pno"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomHeight" destination="dFy-HO-Pno" id="tTX-CB-isO"/>
+                        <outlet property="inputTextView" destination="LtF-vy-7gK" id="Qsp-wM-q6q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="301"/>
+        </scene>
+    </scenes>
+</document>
